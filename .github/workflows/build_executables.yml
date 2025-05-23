@@ -48,7 +48,7 @@ jobs:
           pip install pyinstaller PyQt5 python-binance
 
       - name: Build .exe
-        run: pyinstaller --onefile Crypto_Viewer.py
+        run: pyinstaller --onefile --windowed Crypto_Viewer.py
 
       - name: Upload .exe
         uses: actions/upload-artifact@v4
