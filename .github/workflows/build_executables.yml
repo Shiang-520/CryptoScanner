@@ -27,8 +27,8 @@ jobs:
       - name: Upload .app
         uses: actions/upload-artifact@v4
         with:
-          name: Crypto_Viewer.app
-          path: dist/Crypto_Viewer.app
+          name: CryptoScanner.app
+          path: dist/CryptoScanner.app
 
   build-windows:
     runs-on: windows-latest
@@ -53,6 +53,6 @@ jobs:
       - name: Upload .exe
         uses: actions/upload-artifact@v4
         with:
-          name: Crypto_Viewer.exe
-          path: dist/Crypto_Viewer.exe
+          name: CryptoScanner.exe
+          path: dist/CryptoScanner.exe
 
