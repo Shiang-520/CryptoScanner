@@ -31,7 +31,7 @@ jobs:
           path: dist/Crypto_Viewer.app
 
   build-windows:
-    runs-on: Checkout code
+    runs-on: windows-latest
 
     steps:
       - name: Checkout code
