@@ -43,7 +43,12 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: pyinstaller --onefile Crypto_Viewer.py
+        run: |
+          python -m pip install --upgrade pip
+          pip install pyinstaller PyQt5 python-binance
+
+      - name: Build .exe
+        run: python -m pyinstaller --onefile Crypto_Viwer.py
 
       - name: Upload .exe
         uses: actions/upload-artifact@v4
