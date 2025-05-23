@@ -24,11 +24,6 @@ jobs:
       - name: Build .app
         run: python setup.py py2app
 
-      - name: Rename file
-        run: |
-          mv dist/Crypto_Viewer.exe dist/CryptoScanner.exe
-          rm -f dist/Crypto_Viewer.exe
-
       - name: Upload .app
         uses: actions/upload-artifact@v4
         with:
@@ -53,12 +48,7 @@ jobs:
           pip install pyinstaller PyQt5 python-binance
 
       - name: Build .exe
-        run: pyinstaller --onefile --windowed Crypto_Viewer.py
-
-      - name: Rename file
-        run: |
-          mv dist/Crypto_Viewer.exe dist/CryptoScanner.exe
-          rm -f dist/Crypto_Viewer.exe
+        run: pyinstaller --onefile --windowed CryptoScanner.py
 
       - name: Upload .exe
         uses: actions/upload-artifact@v4
