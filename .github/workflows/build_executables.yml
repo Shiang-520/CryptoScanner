@@ -27,8 +27,8 @@ jobs:
       - name: Upload .app
         uses: actions/upload-artifact@v4
         with:
-          name: FirstLayout.app
-          path: dist/FirstLayout.app
+          name: Crypto_Viewer.app
+          path: dist/Crypto_Viewer.app
 
   build-windows:
     runs-on: Checkout code
@@ -43,11 +43,11 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: pyinstaller --onefile FirstLayout.py
+        run: pyinstaller --onefile Crypto_Viewer.py
 
       - name: Upload .exe
         uses: actions/upload-artifact@v4
         with:
-          name: FirstLayout.exe
-          path: dist/FirstLayout.exe
+          name: Crypto_Viewer.exe
+          path: dist/Crypto_Viewer.exe
 

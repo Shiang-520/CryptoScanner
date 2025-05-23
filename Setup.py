@@ -1,6 +1,6 @@
 from setuptools import setup
 
-APP = ['FirstLayout.py']
+APP = ['Crypto_Viewer.py']
 OPTIONS = {
     'argv_emulation': True,
     'packages': ['PyQt5', 'binance'],
